@@ -1,0 +1,45 @@
+/* basics & reset */
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:system-ui, sans-serif; color:#333; line-height:1.6; }
+
+/* container */
+.container { width:90%; max-width:900px; margin:0 auto; padding:2rem 0; }
+
+/* NAV */
+.site-nav { position:sticky; top:0; background:#fff; border-bottom:1px solid #eee; z-index:100; }
+.nav-container { display:flex; justify-content:space-between; align-items:center; }
+.nav-links { list-style:none; display:flex; gap:1rem; }
+.nav-links a { padding:1rem; display:block; }
+.nav-logo { font-weight:bold; font-size:1.25rem; }
+
+/* SECTIONS */
+.section { padding:4rem 0; border-bottom:1px solid #eee; }
+.home { text-align:center; }
+.home h1 { font-size:3rem; }
+.home h2 { font-size:2rem; margin:.5rem 0; }
+.btn { display:inline-block; margin-top:1rem; padding:.5rem 1rem; border:1px solid #0066cc; text-decoration:none; }
+
+/* EXPERIENCE */
+.cards { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:1.5rem; }
+.card { background:#fff; border:1px solid #eee; border-radius:8px; overflow:hidden; }
+.card img { width:100%; height:150px; object-fit:cover; }
+.card h3 { margin:1rem; font-size:1.25rem; }
+.card p { margin:0 1rem 1rem; font-size:.95rem; }
+
+/* SKILLS */
+.skill-list { list-style:none; display:flex; flex-wrap:wrap; gap:.75rem; }
+.skill-list li { padding:.5rem 1rem; background:#eef; border-radius:4px; font-size:.9rem; }
+
+/* PROJECTS */
+.project-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:1.5rem; }
+.project-card { background:#fff; border:1px solid #eee; border-radius:8px; display:flex; flex-direction:column; }
+.project-card img { width:100%; height:140px; object-fit:cover; }
+.project-card h3 { margin:1rem; font-size:1.2rem; }
+.project-card p { margin:0 1rem 1rem; flex-grow:1; font-size:.95rem; }
+.project-card a { margin:0 1rem 1rem; font-weight:500; }
+
+/* ABOUT & CONTACT */
+.about p, .contact p { font-size:.95rem; margin-top:.5rem; }
+
+/* FOOTER */
+.site-footer { text-align:center; padding:1rem 0; font-size:.85rem; color:#888; }
