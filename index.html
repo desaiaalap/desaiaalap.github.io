@@ -1,203 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Aalap Desai – Data Science Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aalap Desai | Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #f5f7fa;
-      color: #1f2937;
-      line-height: 1.6;
-    }
-
-    header {
-      background-color: #111827;
-      color: #fff;
-      padding: 2rem 1rem;
-      text-align: center;
-    }
-
-    header h1 {
-      font-size: 2.2rem;
-      margin-bottom: 0.25rem;
-    }
-
-    header p {
-      font-size: 1rem;
-      opacity: 0.8;
-    }
-
-    nav {
-      margin-top: 1rem;
-    }
-
-    nav a {
-      color: #9ca3af;
-      margin: 0 12px;
-      text-decoration: none;
-      font-size: 0.95rem;
-    }
-
-    nav a:hover {
-      color: #ffffff;
-      text-decoration: underline;
-    }
-
-    section {
-      max-width: 800px;
-      margin: 3rem auto;
-      padding: 0 1rem;
-    }
-
-    section h2 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-      color: #111827;
-    }
-
-    .repo-card {
-      background: white;
-      padding: 1rem 1.25rem;
-      margin-bottom: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      transition: transform 0.2s;
-    }
-
-    .repo-card:hover {
-      transform: scale(1.01);
-    }
-
-    .repo-card a {
-      text-decoration: none;
-      color: #2563eb;
-      font-weight: 600;
-    }
-
-    .repo-card p {
-      margin-top: 0.25rem;
-      color: #4b5563;
-    }
-
-    .cta-btn {
-      display: inline-block;
-      margin-top: 1.5rem;
-      padding: 10px 20px;
-      background-color: #2563eb;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: 600;
-      transition: background 0.2s;
-    }
-
-    .cta-btn:hover {
-      background-color: #1d4ed8;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      font-size: 0.9rem;
-      color: #6b7280;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; background: #f9fafb; color: #1f2937; line-height: 1.6; }
+    header { background: #111827; color: white; text-align: center; padding: 4rem 1rem; }
+    header h1 { font-size: 2.5rem; }
+    header p { font-size: 1.2rem; margin-top: 0.5rem; color: #d1d5db; }
+    nav { text-align: center; background: #1f2937; padding: 1rem 0; }
+    nav a { color: #9ca3af; margin: 0 1rem; text-decoration: none; font-weight: 600; }
+    nav a:hover { color: white; }
+    section { max-width: 900px; margin: 3rem auto; padding: 0 1rem; }
+    h2 { font-size: 2rem; color: #111827; margin-bottom: 1.5rem; }
+    .skills, .projects { display: grid; gap: 1.5rem; }
+    .project-card { background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); }
+    .project-card h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+    .project-card a { color: #2563eb; text-decoration: none; font-weight: 600; }
+    .cta-button { display: inline-block; margin-top: 2rem; background: #2563eb; color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: bold; }
+    footer { text-align: center; margin-top: 4rem; padding: 2rem; font-size: 0.9rem; color: #6b7280; }
   </style>
 </head>
 <body>
   <header>
-    <h1>Aalap Desai</h1>
-    <p>Data Scientist | Machine Learning | MLOps</p>
-    <nav>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-      <a href="https://aalapdesai6.wixsite.com/the-curious-coder" target="_blank">Sports Portfolio</a>
-    </nav>
+    <h1>AALAP DESAI</h1>
+    <p>Data Scientist | Machine Learning | MLOps | Sports Analytics Enthusiast</p>
+    <p>I build intelligent solutions that blend business with AI – from race strategy to bankruptcy prediction.</p>
   </header>
 
+  <nav>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="https://aalapdesai6.wixsite.com/the-curious-coder" target="_blank">Sports Portfolio</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <p>Python, TensorFlow, Scikit-learn, Power BI, FastAPI, SHAP, SQL, GitHub, Airflow, Google Cloud</p>
+    </div>
+  </section>
+
   <section id="projects">
-    <h2>My GitHub Repositories</h2>
-    <div id="repo-list" style="display: grid; gap: 1.2rem;"></div>
-    <a href="https://aalapdesai6.wixsite.com/the-curious-coder" class="cta-btn" target="_blank">View My Sports Analytics Projects</a>
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project-card">
+        <h3>Project Title 1</h3>
+        <p>Short description of the project goes here.</p>
+        <a href="#">View on GitHub</a>
+      </div>
+      <div class="project-card">
+        <h3>Project Title 2</h3>
+        <p>Short description of the project goes here.</p>
+        <a href="#">View on GitHub</a>
+      </div>
+      <div class="project-card">
+        <h3>Project Title 3</h3>
+        <p>Short description of the project goes here.</p>
+        <a href="#">View on GitHub</a>
+      </div>
+    </div>
+    <a href="https://aalapdesai6.wixsite.com/the-curious-coder" class="cta-button" target="_blank">View My Sports Analytics Projects</a>
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:desai.aal@northeastern.edu">desai.aal@northeastern.edu</a></p>
-    <p><a href="https://linkedin.com/in/aalapdesai" target="_blank">LinkedIn</a> | <a href="https://github.com/desaiaalap" target="_blank">GitHub</a></p>
+    <p><a href="https://www.linkedin.com/in/aalap-desai/" target="_blank">LinkedIn</a> | <a href="https://github.com/desaiaalap" target="_blank">GitHub</a></p>
   </section>
 
   <footer>
     <p>© 2025 Aalap Desai. All rights reserved.</p>
   </footer>
-
- <script>
-  const INCLUDED_REPOS = [
-    "email-assistant",
-    "CustomerSegmentation-Runners",
-    "Bankruptcy-Prediction-Model"
-  ];
-
-  fetch('https://api.github.com/users/desaiaalap/repos?sort=updated')
-    .then(response => response.json())
-    .then(repos => {
-      const container = document.getElementById('repo-list');
-      container.innerHTML = '';
-      repos
-        .filter(repo => INCLUDED_REPOS.includes(repo.name))
-        .forEach(repo => {
-          const card = document.createElement('div');
-          card.style.background = "#fff";
-          card.style.border = "1px solid #e5e7eb";
-          card.style.padding = "1rem 1.5rem";
-          card.style.borderRadius = "10px";
-          card.style.boxShadow = "0 2px 8px rgba(0,0,0,0.03)";
-          card.style.transition = "transform 0.2s ease-in-out";
-          card.style.cursor = "pointer";
-          card.style.display = "flex";
-          card.style.flexDirection = "column";
-          card.style.justifyContent = "space-between";
-
-          card.onmouseover = () => card.style.transform = "scale(1.02)";
-          card.onmouseout = () => card.style.transform = "scale(1.0)";
-
-          const name = document.createElement('a');
-          name.href = repo.html_url;
-          name.target = "_blank";
-          name.textContent = repo.name;
-          name.style.fontSize = "1.15rem";
-          name.style.fontWeight = "600";
-          name.style.color = "#0366d6";
-          name.style.textDecoration = "none";
-          name.style.marginBottom = "0.5rem";
-
-          const desc = document.createElement('p');
-          desc.textContent = repo.description || "No description provided.";
-          desc.style.color = "#4b5563";
-          desc.style.fontSize = "0.95rem";
-
-          card.appendChild(name);
-          card.appendChild(desc);
-          container.appendChild(card);
-        });
-
-      if (container.innerHTML.trim() === '') {
-        container.innerHTML = '<p>No repositories to display.</p>';
-      }
-    })
-    .catch(error => {
-      document.getElementById('repo-list').innerHTML = '<p>Error loading repositories.</p>';
-      console.error('GitHub API error:', error);
-    });
-</script>
-
 </body>
 </html>
