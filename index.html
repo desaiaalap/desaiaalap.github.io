@@ -37,12 +37,25 @@
       margin: auto;
     }
 
+    ul.repo-list {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul.repo-list li {
+      background: #ffffff;
+      margin: 10px 0;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+
     button {
       background-color: #2563eb;
       color: white;
       padding: 10px 20px;
       border: none;
-      margin-top: 10px;
+      margin-top: 20px;
       border-radius: 5px;
       cursor: pointer;
     }
@@ -73,11 +86,9 @@
   </header>
 
   <section id="projects">
-    <h2>Portfolio Projects</h2>
-    <ul>
-      <li><strong>MailMate:</strong> NLP assistant for Gmail using Vertex AI and FastAPI.</li>
-      <li><strong>Bankruptcy Prediction:</strong> Logistic Regression and Random Forest with SHAP.</li>
-      <li><strong>Customer Churn Prediction:</strong> XGBoost + RFM segmentation for telco dataset.</li>
+    <h2>My GitHub Repositories</h2>
+    <ul class="repo-list" id="repo-list">
+      <li>Loading repositories...</li>
     </ul>
     <a href="https://aalapdesai6.wixsite.com/the-curious-coder" target="_blank">
       <button>View My Sports Analytics Projects</button>
@@ -96,5 +107,23 @@
   <footer>
     <p>© 2025 Aalap Desai. All rights reserved.</p>
   </footer>
+
+  <script>
+    fetch('https://api.github.com/users/desaiaalap/repos?sort=updated')
+      .then(response => response.json())
+      .then(repos => {
+        const repoList = document.getElementById('repo-list');
+        repoList.innerHTML = '';
+        repos.forEach(repo => {
+          const li = document.createElement('li');
+          li.innerHTML = `<strong><a href="${repo.html_url}" target="_blank">${repo.name}</a></strong><br>${repo.description || ''}`;
+          repoList.appendChild(li);
+        });
+      })
+      .catch(error => {
+        document.getElementById('repo-list').innerHTML = '<li>Error loading repositories.</li>';
+        console.error('GitHub API error:', error);
+      });
+  </script>
 </body>
 </html>
