@@ -109,11 +109,13 @@
   </footer>
 
   <script>
-  const EXCLUDED_REPOS = [
-    "f1-strategy-optimizer", 
-    "cricket-performance-analysis", 
-    "fitness-analytics-dashboard"
-    // Add any other sports repo names here exactly as they appear on GitHub
+  const INCLUDED_REPOS = [
+    "mailmate-nlp-pipeline",
+    "bankruptcy-prediction",
+    "telco-churn-segmentation",
+    "eda-covid19",
+    "marketing-campaign-analysis"
+    // Add only the repos you want to show here (exact GitHub repo names)
   ];
 
   fetch('https://api.github.com/users/desaiaalap/repos?sort=updated')
@@ -122,7 +124,7 @@
       const repoList = document.getElementById('repo-list');
       repoList.innerHTML = '';
       repos
-        .filter(repo => !EXCLUDED_REPOS.includes(repo.name))
+        .filter(repo => INCLUDED_REPOS.includes(repo.name))
         .forEach(repo => {
           const li = document.createElement('li');
           li.innerHTML = `<strong><a href="${repo.html_url}" target="_blank">${repo.name}</a></strong><br>${repo.description || ''}`;
@@ -138,6 +140,7 @@
       console.error('GitHub API error:', error);
     });
 </script>
+
 
 </body>
 </html>
