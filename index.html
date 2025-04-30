@@ -7,53 +7,54 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <h1>Aalap Desai</h1>
-      <p>Data Analyst | Data Scientist | Sports Analytics Enthusiast</p>
-    </div>
-  </header>
 
+  <!-- NAVBAR -->
   <nav class="site-nav">
-    <div class="container">
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
+    <div class="container nav-container">
+      <a href="#home" class="nav-logo">Aalap Desai</a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </div>
   </nav>
 
-  <section id="about" class="about section">
+  <!-- HOME / HERO -->
+  <section id="home" class="home section">
     <div class="container">
-      <img src="assets/profile.jpg" alt="Aalap Desai" class="profile-pic">
-      <div class="about-text">
-        <h2>About Me</h2>
-        <p>Master’s in Data Analytics Engineering (Northeastern University, ’25), passionate about turning complex data into actionable insights—especially in sports and performance analytics. Experienced in Python, SQL, Power BI, and ML pipelines.</p>
+      <h1>Hello,</h1>
+      <h2>I'm Aalap Desai</h2>
+      <p>Data Analyst | Data Scientist | Sports Analytics Enthusiast</p>
+      <a href="#about" class="btn">About Me</a>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="experience section">
+    <div class="container">
+      <h2>Experience</h2>
+      <div class="cards">
+        <!-- repeat this card for each role -->
+        <div class="card">
+          <img src="assets/kp-group.png" alt="KP Group logo">
+          <h3>Data Analyst @ KP Group</h3>
+          <p>Oct 2021 – Apr 2023<br>
+             Automated weekly healthcare & operational reports with Python & Excel, cutting turnaround by 60%. Built 12+ Power BI dashboards tracking clinical KPIs, boosting planning speed by 30%.</p>
+        </div>
+        <div class="card">
+          <img src="assets/goldenmace.png" alt="Goldenmace logo">
+          <h3>Data Scientist @ Goldenmace IT Solutions</h3>
+          <p>… your bullet points …</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="projects" class="projects section">
-    <div class="container">
-      <h2>Featured Projects</h2>
-      <div class="project-grid">
-        <div class="project-card">
-          <img src="assets/project1.png" alt="MailMate Email Assistant">
-          <h3>MailMate AI Assistant</h3>
-          <p>Gmail summarization & auto-reply using Vertex AI; Airflow ETL; Great Expectations tests.</p>
-          <a href="https://github.com/desaiaalap/mailmate" target="_blank">View on GitHub</a>
-        </div>
-        <div class="project-card">
-          <img src="assets/project2.png" alt="F1 Race Predictor">
-          <h3>F1 Race Prediction</h3>
-          <p>FastF1 telemetry analysis, XGBoost models, and RL-based strategy optimizer.</p>
-          <a href="https://github.com/desaiaalap/f1-race-prediction-optimization" target="_blank">View on GitHub</a>
-        </div>
-        <!-- add more cards as needed -->
-      </div>
-    </div>
-  </section>
-
+  <!-- SKILLS -->
   <section id="skills" class="skills section">
     <div class="container">
       <h2>Skills</h2>
@@ -67,6 +68,36 @@
     </div>
   </section>
 
+  <!-- PROJECTS -->
+  <section id="projects" class="projects section">
+    <div class="container">
+      <h2>Featured Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <img src="assets/mailmate.png" alt="MailMate">
+          <h3>MailMate AI Assistant</h3>
+          <p>Gmail summarization & auto-reply with Vertex AI; Airflow ETL; Great Expectations tests.</p>
+          <a href="https://github.com/desaiaalap/mailmate" target="_blank">View on GitHub</a>
+        </div>
+        <div class="project-card">
+          <img src="assets/f1.png" alt="F1 Predictor">
+          <h3>F1 Race Prediction</h3>
+          <p>FastF1 telemetry analysis, XGBoost modeling, and RL-powered strategy optimizer.</p>
+          <a href="https://github.com/desaiaalap/f1-race-prediction-optimization" target="_blank">View on GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about section">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>Master’s in Data Analytics Engineering (Northeastern ’25). I turn complex data into actionable insights—especially around sports performance. In my free time I’m either at the gym, analyzing F1 races, or exploring new ML tools.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
   <section id="contact" class="contact section">
     <div class="container">
       <h2>Contact</h2>
@@ -80,5 +111,6 @@
       <p>© 2025 Aalap Desai</p>
     </div>
   </footer>
+
 </body>
 </html>
