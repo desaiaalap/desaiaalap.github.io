@@ -109,21 +109,35 @@
   </footer>
 
   <script>
-    fetch('https://api.github.com/users/desaiaalap/repos?sort=updated')
-      .then(response => response.json())
-      .then(repos => {
-        const repoList = document.getElementById('repo-list');
-        repoList.innerHTML = '';
-        repos.forEach(repo => {
+  const EXCLUDED_REPOS = [
+    "f1-strategy-optimizer", 
+    "cricket-performance-analysis", 
+    "fitness-analytics-dashboard"
+    // Add any other sports repo names here exactly as they appear on GitHub
+  ];
+
+  fetch('https://api.github.com/users/desaiaalap/repos?sort=updated')
+    .then(response => response.json())
+    .then(repos => {
+      const repoList = document.getElementById('repo-list');
+      repoList.innerHTML = '';
+      repos
+        .filter(repo => !EXCLUDED_REPOS.includes(repo.name))
+        .forEach(repo => {
           const li = document.createElement('li');
           li.innerHTML = `<strong><a href="${repo.html_url}" target="_blank">${repo.name}</a></strong><br>${repo.description || ''}`;
           repoList.appendChild(li);
         });
-      })
-      .catch(error => {
-        document.getElementById('repo-list').innerHTML = '<li>Error loading repositories.</li>';
-        console.error('GitHub API error:', error);
-      });
-  </script>
+
+      if (repoList.innerHTML.trim() === '') {
+        repoList.innerHTML = '<li>No repositories to display.</li>';
+      }
+    })
+    .catch(error => {
+      document.getElementById('repo-list').innerHTML = '<li>Error loading repositories.</li>';
+      console.error('GitHub API error:', error);
+    });
+</script>
+
 </body>
 </html>
