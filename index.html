@@ -2,78 +2,83 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Aalap Desai | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: #f9fafb; color: #1f2937; line-height: 1.6; }
-    header { background: #111827; color: white; text-align: center; padding: 4rem 1rem; }
-    header h1 { font-size: 2.5rem; }
-    header p { font-size: 1.2rem; margin-top: 0.5rem; color: #d1d5db; }
-    nav { text-align: center; background: #1f2937; padding: 1rem 0; }
-    nav a { color: #9ca3af; margin: 0 1rem; text-decoration: none; font-weight: 600; }
-    nav a:hover { color: white; }
-    section { max-width: 900px; margin: 3rem auto; padding: 0 1rem; }
-    h2 { font-size: 2rem; color: #111827; margin-bottom: 1.5rem; }
-    .skills, .projects { display: grid; gap: 1.5rem; }
-    .project-card { background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); }
-    .project-card h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
-    .project-card a { color: #2563eb; text-decoration: none; font-weight: 600; }
-    .cta-button { display: inline-block; margin-top: 2rem; background: #2563eb; color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: bold; }
-    footer { text-align: center; margin-top: 4rem; padding: 2rem; font-size: 0.9rem; color: #6b7280; }
-  </style>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <h1>AALAP DESAI</h1>
-    <p>Data Analyst | Data Scientist | Machine Learning | Sports Analytics Enthusiast</p>
-    <p>I build intelligent solutions that blend business with AI – from race strategy to bankruptcy prediction.</p>
-    <a href="https://aalapdesai6.wixsite.com/the-curious-coder" class="cta-button" target="_blank">Explore Sports Portfolio</a>
+  <header class="site-header">
+    <div class="container">
+      <h1>Aalap Desai</h1>
+      <p>Data Analyst | Data Scientist | Sports Analytics Enthusiast</p>
+    </div>
   </header>
 
-  <nav>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
+  <nav class="site-nav">
+    <div class="container">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
   </nav>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="skills">
-      <p>Python, TensorFlow, Scikit-learn, Power BI, FastAPI, SHAP, SQL, GitHub, Airflow, Google Cloud</p>
-    </div>
-  </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="projects">
-      <div class="project-card">
-        <h3>MailMate</h3>
-        <p>NLP-powered Gmail assistant that summarizes, suggests replies, and flags action items using Vertex AI and FastAPI.</p>
-        <a href="#">View on GitHub</a>
-      </div>
-      <div class="project-card">
-        <h3>Bankruptcy Prediction Model</h3>
-        <p>Classification model with SHAP interpretability on financial indicators to detect early bankruptcy risk.</p>
-        <a href="#">View on GitHub</a>
-      </div>
-      <div class="project-card">
-        <h3>Customer Churn Segmentation</h3>
-        <p>Telco churn prediction using RFM analysis, XGBoost modeling, and actionable business segmentation insights.</p>
-        <a href="#">View on GitHub</a>
+  <section id="about" class="about section">
+    <div class="container">
+      <img src="assets/profile.jpg" alt="Aalap Desai" class="profile-pic">
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>Master’s in Data Analytics Engineering (Northeastern University, ’25), passionate about turning complex data into actionable insights—especially in sports and performance analytics. Experienced in Python, SQL, Power BI, and ML pipelines.</p>
       </div>
     </div>
   </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:desai.aal@northeastern.edu">desai.aal@northeastern.edu</a></p>
-    <p><a href="https://linkedin.com/in/aalap-desai" target="_blank">LinkedIn</a> | <a href="https://github.com/desaiaalap" target="_blank">GitHub</a></p>
+  <section id="projects" class="projects section">
+    <div class="container">
+      <h2>Featured Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <img src="assets/project1.png" alt="MailMate Email Assistant">
+          <h3>MailMate AI Assistant</h3>
+          <p>Gmail summarization & auto-reply using Vertex AI; Airflow ETL; Great Expectations tests.</p>
+          <a href="https://github.com/desaiaalap/mailmate" target="_blank">View on GitHub</a>
+        </div>
+        <div class="project-card">
+          <img src="assets/project2.png" alt="F1 Race Predictor">
+          <h3>F1 Race Prediction</h3>
+          <p>FastF1 telemetry analysis, XGBoost models, and RL-based strategy optimizer.</p>
+          <a href="https://github.com/desaiaalap/f1-race-prediction-optimization" target="_blank">View on GitHub</a>
+        </div>
+        <!-- add more cards as needed -->
+      </div>
+    </div>
   </section>
 
-  <footer>
-    <p>© 2025 Aalap Desai. All rights reserved.</p>
+  <section id="skills" class="skills section">
+    <div class="container">
+      <h2>Skills</h2>
+      <ul class="skill-list">
+        <li>Python (pandas, scikit-learn, TensorFlow)</li>
+        <li>SQL & Data Modeling</li>
+        <li>Power BI | Tableau</li>
+        <li>Airflow | GCP | Docker</li>
+        <li>Statistical Analysis & A/B Testing</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact" class="contact section">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:desai.aal@northeastern.edu">desai.aal@northeastern.edu</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/aalapdesai6" target="_blank">aalapdesai6</a> | GitHub: <a href="https://github.com/desaiaalap" target="_blank">desaiaalap</a></p>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Aalap Desai</p>
+    </div>
   </footer>
 </body>
 </html>
